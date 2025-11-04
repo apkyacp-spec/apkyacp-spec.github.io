@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #1A1A1A;
+  --card: #2A2A2A;
+  --text: #F9FAFB;
+  --muted: #9CA3AF;
+  --accent: #6366F1;
+  --success: #22C55E;
+  --danger: #F87171;
+  --border: #374151;
+}
+.light {
+  --bg: #F7F8FA;
+  --card: #FFFFFF;
+  --text: #111827;
+  --muted: #6B7280;
+  --accent: #4F46E5;
+  --success: #10B981;
+  --danger: #EF4444;
+  --border: #E5E7EB;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+}
