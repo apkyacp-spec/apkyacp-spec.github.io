@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "tsBuildInfoFile": "./node_modules/
+    "tsBuildInfoFile": "./node_modules/.tsbuildinfo",
     "module": "ESNext",
     "types": ["node"],
     "skipLibCheck": true,
