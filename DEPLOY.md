@@ -1,4 +1,83 @@
-# Деплой фронта на GitHub Pages
+# Деплой фронта
+
+## Деплой на Netlify (рекомендуется)
+
+### Шаг 1: Подготовка проекта
+
+1. Убедись, что файлы `netlify.toml` и `public/_redirects` созданы (уже добавлены)
+
+2. Установи зависимости:
+```bash
+cd webapp-react
+npm install
+```
+
+3. Проверь сборку:
+```bash
+npm run build
+```
+
+### Шаг 2: Деплой через Netlify CLI
+
+1. Установи Netlify CLI (если еще не установлен):
+```bash
+npm install -g netlify-cli
+```
+
+2. Войди в Netlify:
+```bash
+netlify login
+```
+
+3. Инициализируй проект:
+```bash
+cd webapp-react
+netlify init
+```
+
+4. Следуй инструкциям:
+   - Выбери "Create & configure a new site"
+   - Выбери команду сборки: `npm run build`
+   - Выбери директорию публикации: `dist`
+
+5. Деплой:
+```bash
+netlify deploy --prod
+```
+
+### Шаг 3: Деплой через веб-интерфейс Netlify
+
+1. Зайди на [netlify.com](https://www.netlify.com) и зарегистрируйся/войди
+
+2. Нажми **"Add new site"** → **"Import an existing project"**
+
+3. Подключи репозиторий GitHub (или загрузи файлы через drag & drop)
+
+4. Настройки сборки:
+   - **Build command:** `npm run build`
+   - **Publish directory:** `dist`
+   - **Base directory:** `webapp-react` (если репозиторий корневой)
+
+5. Нажми **"Deploy site"**
+
+### Шаг 4: Настройка переменных окружения (если нужно)
+
+В настройках сайта в Netlify:
+1. **Site settings** → **Environment variables**
+2. Добавь переменные:
+   - `VITE_API_BASE` = URL бэкенда
+   - `VITE_WS_URL` = WebSocket URL
+
+### Шаг 5: Обновить URL в Telegram Bot
+
+В настройках бота (BotFather) укажи Web App URL:
+```
+https://ваш-сайт.netlify.app
+```
+
+---
+
+## Деплой на GitHub Pages
 
 ## Шаг 1: Подготовка репозитория
 
@@ -70,4 +149,5 @@ https://твой-юзер.github.io/твой-репозиторий/
 - Первый деплой может занять 2-5 минут
 - После каждого пуша в `main` сайт автоматически обновится
 - Если что-то не работает, проверь логи в **Actions**
+
 

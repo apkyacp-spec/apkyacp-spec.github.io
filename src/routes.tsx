@@ -9,8 +9,9 @@ import { RequireAccess } from './roles';
 
 function Layout() {
   return (
-    <div className="min-h-screen bg-[var(--bg)] text-[var(--text)]">
-      <div className="max-w-[480px] mx-auto p-4 pb-28">
+    <div className="min-h-screen text-[var(--text)] relative">
+      <div className="absolute inset-0 bg-gradient-to-br from-[var(--bg)] via-[var(--bg-secondary)] to-[var(--bg)]" />
+      <div className="relative z-10 max-w-[480px] mx-auto p-5 pb-32 min-h-screen">
         <RequireAccess>
           <Outlet />
         </RequireAccess>

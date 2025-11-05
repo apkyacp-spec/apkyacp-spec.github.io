@@ -4,6 +4,7 @@ import { useAuth } from './context/AuthContext';
 
 const ACCESS: Record<string, string[]> = {
   drop: ['/', '/balance', '/manuals', '/chats'],
+  worker: ['/', '/balance', '/manuals', '/chats'], // алиас для drop
   dropovod: ['/', '/forms', '/balance', '/manuals', '/chats'],
   kassa: ['/', '/balance', '/manuals', '/chats'],
   inkassator: ['/', '/balance', '/manuals', '/chats'],
