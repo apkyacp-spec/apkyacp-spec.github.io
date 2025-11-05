@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Card } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
 import { Badge } from '../components/ui/Badge';
-import { BookOpen, Search, FileText, Video, CheckCircle2, Sparkles } from 'lucide-react';
+import { BookOpen, Search, FileText, Video, CheckCircle2 } from 'lucide-react';
 
 export default function Manuals() {
   const [search, setSearch] = useState('');
